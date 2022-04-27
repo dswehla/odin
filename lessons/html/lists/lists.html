@@ -5,22 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lists | The Odin Project</title>
+    <!-- https://www.theodinproject.com/lessons/foundations-lists#assignment -->
 </head>
+
 <body>
-<!-- Git commit message
---------10--------20--------30--------40--------50--------60----------72
-Create lists practice HTML page
-
-https://www.theodinproject.com/lessons/foundations-lists#assignment
-
-To get some practice using lists, create a new HTML document and create
-the following lists:
-    1. An unordered shopping list of your favorite foods
-    2. An ordered list of todo’s you need to get done today
-    3. An unordered list of places you’d like to visit someday
-    4. An ordered list of your all time top 5 favorite video games
---------10--------20--------30--------40--------50--------60----------72
--->
 
 <h1>List Practice</h1>
 <p>To get some practice using lists, create a new HTML document and create the following lists:
@@ -49,7 +37,11 @@ the following lists:
 </ol>
 
 <h2>Places to Visit</h2>
-<ul><!--  -->
+<ul type="square" compact><!-- 
+    The TYPE and COMPACT attributes for unordered lists are both deprecated. 
+    Use the CSS list-style-type property instead.
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+-->
     <li>Biggest Ball of Twine in Minnesota</li>
     <li>Iceland</li>
     <li>Huntington Gallery</li>
@@ -57,12 +49,16 @@ the following lists:
 </ul>
 
 <h2>Top 5 Video Games</h2>
-<ol><!-- top 5 movies -->
+<ol type="I" reversed><!-- 
+    The TYPE attribute for ordered lists is different than the one for unordered.
+    Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS list-style-type property instead.
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attr-type
+-->
+    <li>Super Mario Bros</li>
+    <li>Pac-Man</li>
+    <li>Breakout</li>
     <li>River Raid</li>
     <li>Yar's Revenge</li>
-    <li>Breakout</li>
-    <li>Pac-Man</li>
-    <li>Super Mario Bros</li>
 </ol>
 
 </body>
