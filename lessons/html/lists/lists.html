@@ -11,14 +11,33 @@
 <body>
 
 <h1>List Practice</h1>
-<p>To get some practice using lists, create a new HTML document and create the following lists:
-    <ol>
-        <li>An unordered shopping list of your favorite foods</li>
-        <li>An ordered list of todo’s you need to get done today</li>
-        <li>An unordered list of places you’d like to visit someday</li>
-        <li>An ordered list of your all time top 5 favorite video games or movies</li>
-    </ol>
-</p>
+<p>To get some practice using lists, create a new HTML document and create the following lists:</p>
+<ol>
+    <li>An unordered shopping list of your favorite foods</li>
+    <li>An ordered list of todo’s you need to get done today</li>
+    <li>An unordered list of places you’d like to visit someday</li>
+    <li>An ordered list of your all time top 5 favorite video games or movies</li>
+</ol>
+<!-- Lists cannot be nested inside paragraphs, according to the HTML 5 spec. 
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p (see Tag Omission)
+    https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element
+
+    There is currently no accepted way to code lists that logically belong within a paragraph.
+    Best bet is prob to wrap the set in a <div> element, and apply suitable styling with CSS:
+        <div class="paragraph_with_list">
+            <p>This paragraph's parent element contains the following child elements:</p>
+            <ol>
+                <li>A paragraph</li>
+                <li>An ordered list</li>
+                <li>A second paragraph</li>
+            </ol>
+            <p>which allows us to pretend we've nested the list inside a single paragraph.</p>
+        </div>
+    https://stackoverflow.com/questions/3191327/nest-lists-in-paragraphs-in-html
+
+    Not everyone knows this.
+    https://www.oxygenxml.com/dita/styleguide/webhelp-feedback/Artefact/Syntax_and_Markup/c_Lists_within_Paragraphs.html
+-->
 
 <h2>Favorite Foods</h2>
 <ul>
@@ -61,5 +80,23 @@
     <li>Yar's Revenge</li>
 </ol>
 
+<h2>Description List</h2>
+<!-- https://learn.shayhowe.com/html-css/creating-lists/#description-lists -->
+<dl>
+    <!-- the description list requires two block-level elements: 
+         the description term element, <dt>, and the description element, <dd> -->
+    <dt>study</dt>
+    <dd>The devotion of time and attention to acquiring knowledge on an academic subject, especially by means of books</dd>
+
+    <!-- A single term may have multiple meanings and warrant multiple descriptions. -->
+    <dt>design</dt>
+    <dd>A plan or drawing produced to show the look and function or workings of a building, garment, or other object before it is built or made</dd>
+    <dd>Purpose, planning, or intention that exists or is thought to exist behind an action, fact, or material object</dd>
+
+    <!-- Conversely, a single description may be suitable for multiple terms. -->
+    <dt>business</dt>
+    <dt>work</dt>
+    <dd>A person's regular occupation, profession, or trade</dd>
+</dl>
 </body>
 </html>
